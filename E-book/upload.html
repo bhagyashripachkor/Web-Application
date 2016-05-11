@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>upload file</title>
+		<style>
+		
+		html { 
+			background: url(b1.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		#con{
+			display: flex;
+		}
+		#main {
+			margin-top: 50px;
+			margin-left: 300px;
+			margin-bottom: 40px;
+			margin-right: 10px;
+			
+		}
+		#sub {
+			margin-top: 50px;
+			margin-bottom: 40px;
+			margin-left: 50px;
+			margin-right: 50px;
+			
+		}
+		#title{
+			margin-top: 100px;
+			margin-bottom: 20px;
+			margin-right: 50px;
+		}
+		#main1 {
+			margin-top: 50px;
+			margin-left: 650px;
+			margin-bottom: 40px;
+			margin-right: 10px;
+			
+		}
+		.buttonCategory {
+    background-color: blue;
+    border: none;
+    color: white;
+	padding: 15px 32px;
+    border-width:1px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+		</style>
+    </head>
+    <body>
+	<div id="title" align="center">
+		<h1> Upload a Book </h1>
+	</div>
+	<div id="con">
+		<div id="main" align="right">
+			<form enctype="multipart/form-data" method="post">
+				<div>
+					<label><b>Select a Course:</b>
+						
+					</label>
+				</div>
+				<br>
+				<div>
+					<label><b>Enter Author of book:</b>
+						
+					</label>
+				
+				</div>
+				<br>
+				<div>
+					<label><b>Enter ISBN(International Standard Book Number):</b>
+						
+					</label>
+				</div>
+				<br>
+				<div>
+					<label><b>Upload Ebook(only pdf format):</b>
+						
+					</label>
+				</div>
+		</div>
+		<div id="sub" align="left">
+			<div>
+				<select name="course">
+							<option value="select course" selected>Select a Course</option>
+							<option value="Java">Java</option>
+							<option value="C">C</option>
+							<option value="Python">Python</option>
+							<option value="DataStructures">DataStructures</option>
+							<option value="OperatingSystems">OperatingSystems</option>
+							<option value="C++">C++</option>
+							<option value="php">PHP</option>
+						</select>
+			</div>
+			<br>
+			<div>
+				<input type="text" name="author">
+			</div>
+			<br>
+			<div>
+				<input type="text" name="isbn">
+			</div>
+			<br>
+			<div>
+				<input type="file" name="datafile" size="40">
+			</div>
+		</div>
+		
+	</div>
+	<div id="main1">
+			<button type="button" value="upload" class="buttonCategory" > Upload</a>
+	</div>
+	</form>
+	</body>
+	</html>
+   

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+  <center>
+    <h2 style="color:blue">Login</h2>  
+  </center>
+  <br>
+<!--   <a href="/blog/signup/">Signup</a> 
+  <a href="/blog/">Blog</a>  -->
+  <form method="post">
+  <center>
+    <label>
+      Username
+      <input type="text" name="username" value="{{ username }}">
+    </label>
+    <br>
+    <br>
+    <label>
+      Password
+      <input type="password" name="password">
+    </label>
+    <br>
+    <br>
+    <span style="color: red;">{{ error }}</span>
+    <br>
+    <br>
+    <input type="submit" value="submit">
+  </center>
+  </form>
+
+{% endblock %}

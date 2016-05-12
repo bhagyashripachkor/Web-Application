@@ -1,0 +1,85 @@
+<html>
+<head>
+<title> Search Book</title>
+<style>
+html { 
+  background: url(b1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#one{
+	
+	margin-left: 500px;
+	margin-top: 20px;
+	
+}
+#main {
+	display: flex;
+	margin-left: 300px;
+}
+
+#two {
+	padding-left:50px;
+	padding-right:60px;
+	
+	
+}
+
+#maindiv{
+	margin-top: 50px;
+	margin-left: 100px;
+	display: flex;
+}
+.buttonCategory {
+    background-color: blue;
+    border: none;
+    color: white;
+	padding: 15px 32px;
+    border-width:1px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#bt{
+	display: flex;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+</style>
+</head>
+<body>
+	
+		
+haiiiii
+{% for book in books %}
+  
+   <br>
+ <form action="../../view_photo/" method="GET" enctype="multipart/form-data">
+    {{ book.Book_Name}}          
+                  <input type="hidden" name="resource"  value= {{ book.blob_key}} > <br>
+                 
+                  <input type="submit"  value="Download pdf">
+  </form>
+  
+
+{% endfor %}
+
+
+<div id= "maindiv">
+	<div id="main">
+		<div id="two">
+			<button type="button" class="buttonCategory" > Search</a>
+		</div>
+		<div>
+			<button type="button" class="buttonCategory" > Reset</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

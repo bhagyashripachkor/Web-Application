@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script type = "text/javascript" >
+        function preventBack() { window.history.forward(1); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+	</script>
+ <title> User Home Page </title>
+ <style>
+html { 
+  background: url(b1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+
+.button {
+    background-color: none;
+    border: none;
+    color: blue;
+    border-width:1px;
+    text-align: center;
+    text-decoration: none;
+    display: block-inline;
+
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buttonCategory {
+    background-color: blue;
+    border: none;
+    color: white;
+	padding: 15px 32px;
+    border-width:1px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#one{
+	display: flex;
+	padding-left:300px;
+	margin-top: 100px;
+	background-color: lightblue;
+}
+#main {
+	
+	margin-top: 20px;
+	
+}
+#sub{
+	margin-top: 20px;
+	margin-right: 40px;
+}
+#content{
+	
+	margin-top: 40px;
+	margin-left: 40px;
+	background-color:#ffdb4d;
+}
+#list{
+	display: flex;
+	margin-top: 20px;
+	margin-left: 60px;
+}
+
+#space{
+	margin-top: 20px;
+}
+
+#space-vertical{
+	margin-top: 20px;
+	margin-left : 40px;
+}
+
+#maindiv{
+	display: flex;
+}
+
+
+</style>
+  </head>
+  <body>
+	<div id="main" align="center">
+	  <h1> Read the world through E-Books here!</h1>
+	  
+	</div>
+	<div id="sub" align="right">
+		<h1> Welcome, {{ username }}!</h1>
+		<a href="start.html" class="button" align="center"> Logout</a>
+	</div>
+	<div id = "maindiv">
+		<div id="content" align="left">	
+			<h2> Profile </h2>
+			<div id="space">
+				<a href="settings.html" class="button"> Settings</a>
+			</div>
+		
+			<div id="space">
+				<a href="upload.html" target="_blank" class="button"> Upload Book</a>
+			</div>
+			<div id="space">
+				<a href="search.html" target="_blank" class="button"> Search Book</a>
+			</div>
+		</div>
+		
+		<div id="list">
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory" > C</a>
+				</div>
+			</div>
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory"> C++</a>
+				</div>
+			</div>
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory"> Java</a>
+				</div>
+			</div>
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory"> Python</a>
+				</div>
+			</div>
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory"> PHP</a>
+				</div>
+			</div>
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory"> Data Structure</a>
+				</div>
+			</div>
+			<div>
+				<div id="space">
+					<button type="button" class="buttonCategory"> Operating System</a>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	
+  </body>
+</html>
+
+
+{% endblock %}
